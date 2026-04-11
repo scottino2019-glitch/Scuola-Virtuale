@@ -7,8 +7,24 @@ import {
   Calendar, 
   MessageSquare, 
   School,
-  ChevronRight
+  ChevronRight,
+  Calculator,
+  Code,
+  Book,
+  Edit3,
+  Languages,
+  Globe
 } from 'lucide-react';
+
+const ICON_MAP: Record<string, any> = {
+  calculator: Calculator,
+  code: Code,
+  book: Book,
+  edit: Edit3,
+  languages: Languages,
+  globe: Globe,
+  monitor: Monitor
+};
 
 interface SidebarProps {
   activeTab: string;
@@ -68,29 +84,32 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
         <div className="space-y-2">
           <p className="px-4 text-[10px] font-bold uppercase tracking-[0.2em] text-stone-500 mb-3">Aule Studio</p>
-          {classrooms.map((room) => (
-            <Button
-              key={room.id}
-              variant="ghost"
-              className={cn(
-                "w-full justify-start gap-3 rounded-xl py-6 transition-all duration-300 group",
-                selectedClassroom === room.id 
-                  ? "bg-campus-accent/20 text-campus-gold shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] border border-stone-700" 
-                  : "text-stone-400 hover:text-stone-200 hover:bg-stone-800/50"
-              )}
-              onClick={() => {
-                setSelectedClassroom(room.id);
-                setActiveTab('aula');
-              }}
-            >
-              <Monitor className={cn("h-5 w-5", selectedClassroom === room.id ? "text-campus-gold" : "text-stone-500")} />
-              <span className="font-medium truncate tracking-wide">{room.name}</span>
-              <ChevronRight className={cn(
-                "ml-auto h-4 w-4 opacity-0 transition-all",
-                selectedClassroom === room.id ? "opacity-100 translate-x-0" : "group-hover:opacity-100 -translate-x-1"
-              )} />
-            </Button>
-          ))}
+          {classrooms.map((room) => {
+            const IconComponent = ICON_MAP[room.icon] || Monitor;
+            return (
+              <Button
+                key={room.id}
+                variant="ghost"
+                className={cn(
+                  "w-full justify-start gap-3 rounded-xl py-6 transition-all duration-300 group",
+                  selectedClassroom === room.id 
+                    ? "bg-campus-accent/20 text-campus-gold shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] border border-stone-700" 
+                    : "text-stone-400 hover:text-stone-200 hover:bg-stone-800/50"
+                )}
+                onClick={() => {
+                  setSelectedClassroom(room.id);
+                  setActiveTab('aula');
+                }}
+              >
+                <IconComponent className={cn("h-5 w-5", selectedClassroom === room.id ? "text-campus-gold" : "text-stone-500")} />
+                <span className="font-medium truncate tracking-wide">{room.name}</span>
+                <ChevronRight className={cn(
+                  "ml-auto h-4 w-4 opacity-0 transition-all",
+                  selectedClassroom === room.id ? "opacity-100 translate-x-0" : "group-hover:opacity-100 -translate-x-1"
+                )} />
+              </Button>
+            );
+          })}
         </div>
       </div>
 

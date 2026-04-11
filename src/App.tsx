@@ -29,6 +29,7 @@ const INITIAL_LESSONS: Lesson[] = [
 const CLASSROOMS: ClassroomType[] = [
   { id: 'math', name: 'Aula di Matematica', icon: 'calculator', appUrl: 'https://www.geogebra.org/graphing?embed' },
   { id: 'coding', name: 'Laboratorio Coding', icon: 'code', appUrl: 'https://replit.com/~' },
+  { id: 'languages', name: 'Aula di Lingue', icon: 'languages', appUrl: 'https://www.duolingo.com/' },
   { id: 'library', name: 'Biblioteca Digitale', icon: 'book', appUrl: 'https://archive.org/details/books' },
   { id: 'whiteboard', name: 'Lavagna Condivisa', icon: 'edit', appUrl: 'https://excalidraw.com/' },
 ];
