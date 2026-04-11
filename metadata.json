@@ -1,0 +1,5 @@
+{
+  "name": "Scuola Virtuale Interattiva",
+  "description": "Un'app interattiva per una scuola virtuale con aule didattiche, bacheca editabile, orario lezioni, blocknote e chat AI con Gemini.",
+  "requestFramePermissions": []
+}
