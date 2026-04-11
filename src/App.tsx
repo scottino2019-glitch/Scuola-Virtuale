@@ -100,7 +100,7 @@ export default function App() {
   };
 
   return (
-    <div className="flex h-screen bg-campus-dark text-stone-900 overflow-hidden font-sans">
+    <div className="flex h-[100dvh] bg-campus-dark text-stone-900 overflow-hidden font-sans">
       {/* Desktop Sidebar */}
       <div className="hidden md:block">
         <Sidebar 

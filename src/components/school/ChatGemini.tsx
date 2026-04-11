@@ -15,13 +15,17 @@ export const ChatGemini: React.FC = () => {
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  const scrollToBottom = () => {
+    setTimeout(() => {
+      messagesEndRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+    }, 100);
+  };
 
   useEffect(() => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
-    }
-  }, [messages]);
+    scrollToBottom();
+  }, [messages, isLoading]);
 
   const handleSend = async () => {
     if (!input.trim() || isLoading) return;
@@ -43,21 +47,21 @@ export const ChatGemini: React.FC = () => {
   };
 
   return (
-    <div className="h-full flex flex-col max-w-4xl mx-auto p-4 md:p-8">
-      <Card className="flex-1 flex flex-col border-none shadow-2xl overflow-hidden wood-texture border border-stone-800 rounded-3xl">
-        <CardHeader className="border-b border-stone-800 bg-black/20 backdrop-blur-md py-6">
-          <CardTitle className="text-2xl font-serif text-campus-gold flex items-center gap-3">
-            <div className="bg-campus-accent p-2 rounded-xl shadow-inner border border-stone-700">
-              <Bot className="h-6 w-6 text-white" />
+    <div className="h-full flex flex-col max-w-4xl mx-auto p-2 md:p-8 min-h-0">
+      <Card className="flex-1 flex flex-col border-none shadow-2xl overflow-hidden wood-texture border border-stone-800 rounded-2xl md:rounded-3xl min-h-0">
+        <CardHeader className="border-b border-stone-800 bg-black/20 backdrop-blur-md py-4 md:py-6">
+          <CardTitle className="text-xl md:text-2xl font-serif text-campus-gold flex items-center gap-3">
+            <div className="bg-campus-accent p-1.5 md:p-2 rounded-xl shadow-inner border border-stone-700">
+              <Bot className="h-5 w-5 md:h-6 md:w-6 text-white" />
             </div>
             Tutor Accademico
           </CardTitle>
         </CardHeader>
-        <CardContent className="flex-1 flex flex-col p-0 overflow-hidden relative">
+        <CardContent className="flex-1 flex flex-col p-0 overflow-hidden relative min-h-0">
           {/* Background pattern */}
           <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
           
-          <ScrollArea className="flex-1 p-6" ref={scrollRef}>
+          <ScrollArea className="flex-1 p-4 md:p-6 overscroll-contain">
             <div className="space-y-6">
               {messages.map((msg, i) => (
                 <motion.div
@@ -90,24 +94,25 @@ export const ChatGemini: React.FC = () => {
                   </div>
                 </div>
               )}
+              <div ref={messagesEndRef} />
             </div>
           </ScrollArea>
           
-          <div className="p-6 bg-black/20 border-t border-stone-800">
-            <div className="flex gap-3 bg-stone-900/50 p-2 rounded-2xl border border-stone-800 shadow-inner">
+          <div className="p-4 md:p-6 bg-black/20 border-t border-stone-800">
+            <div className="flex gap-2 md:gap-3 bg-stone-900/50 p-2 rounded-2xl border border-stone-800 shadow-inner">
               <Input
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && handleSend()}
-                placeholder="Poni un quesito al tuo precettore..."
-                className="flex-1 bg-transparent border-none text-stone-200 placeholder:text-stone-600 focus-visible:ring-0 text-lg font-serif"
+                placeholder="Chiedi qualcosa..."
+                className="flex-1 bg-transparent border-none text-stone-200 placeholder:text-stone-600 focus-visible:ring-0 text-base md:text-lg font-serif"
               />
               <Button 
                 onClick={handleSend} 
                 disabled={isLoading}
-                className="rounded-xl bg-campus-accent hover:bg-stone-700 text-white shadow-lg px-6"
+                className="rounded-xl bg-campus-accent hover:bg-stone-700 text-white shadow-lg px-4 md:px-6"
               >
-                <Send className="h-5 w-5" />
+                {isLoading ? <Loader2 className="h-5 w-5 animate-spin" /> : <Send className="h-5 w-5" />}
               </Button>
             </div>
           </div>
