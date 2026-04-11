@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/Badge';
-import { Button } from '@/components/ui/Button';
-import { Input } from '@/components/ui/Input';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui-components/Card';
+import { Badge } from '@/components/ui-components/Badge';
+import { Button } from '@/components/ui-components/Button';
+import { Input } from '@/components/ui-components/Input';
 import { Calendar as CalendarIcon, Clock, MapPin, Plus, Trash2, Edit2, Check } from 'lucide-react';
 import { Lesson } from '@/types';
 import { motion } from 'motion/react';

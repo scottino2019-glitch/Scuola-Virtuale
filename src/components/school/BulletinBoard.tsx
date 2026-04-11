@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { Button } from '@/components/ui/Button';
-import { Textarea } from '@/components/ui/Textarea';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui-components/Card';
+import { Button } from '@/components/ui-components/Button';
+import { Textarea } from '@/components/ui-components/Textarea';
 import { Plus, X, StickyNote } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Note } from '@/types';

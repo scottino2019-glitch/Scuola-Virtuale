@@ -1,8 +1,8 @@
 import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui-components/Card';
 import { Classroom as ClassroomType } from '@/types';
 import { Monitor, ExternalLink } from 'lucide-react';
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui-components/Button';
 
 interface ClassroomProps {
   classroom: ClassroomType;

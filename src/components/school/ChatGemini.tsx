@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { Button } from '@/components/ui/Button';
-import { Input } from '@/components/ui/Input';
-import { ScrollArea } from '@/components/ui/ScrollArea';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui-components/Card';
+import { Button } from '@/components/ui-components/Button';
+import { Input } from '@/components/ui-components/Input';
+import { ScrollArea } from '@/components/ui-components/ScrollArea';
 import { Send, Bot, User, Loader2 } from 'lucide-react';
 import { chatWithGemini } from '@/lib/gemini';
 import { ChatMessage } from '@/types';
