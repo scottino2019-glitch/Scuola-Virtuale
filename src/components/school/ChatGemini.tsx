@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui-components/Card';
 import { Button } from '@/components/ui-components/Button';
 import { Input } from '@/components/ui-components/Input';
-import { ScrollArea } from '@/components/ui-components/ScrollArea';
 import { Send, Bot, User, Loader2 } from 'lucide-react';
 import { chatWithGemini } from '@/lib/gemini';
 import { ChatMessage } from '@/types';
@@ -78,7 +77,7 @@ export const ChatGemini: React.FC = () => {
           {/* Background pattern */}
           <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
           
-          <ScrollArea className="flex-1 p-4 md:p-6 overscroll-contain">
+          <div className="flex-1 overflow-y-auto p-4 md:p-6 overscroll-contain no-scrollbar">
             <div className="space-y-6">
               {messages.map((msg, i) => (
                 <motion.div
@@ -100,7 +99,7 @@ export const ChatGemini: React.FC = () => {
                       {msg.role === 'user' ? <User className="h-3 w-3" /> : <Bot className="h-3 w-3" />}
                       {msg.role === 'user' ? 'Studente' : 'Gemini AI'}
                     </div>
-                    <p className="text-base font-serif leading-relaxed italic">{msg.text}</p>
+                    <p className="text-base font-serif leading-relaxed italic whitespace-pre-wrap">{msg.text}</p>
                   </div>
                 </motion.div>
               ))}
@@ -111,9 +110,9 @@ export const ChatGemini: React.FC = () => {
                   </div>
                 </div>
               )}
-              <div ref={messagesEndRef} />
+              <div ref={messagesEndRef} className="h-2" />
             </div>
-          </ScrollArea>
+          </div>
           
           <div className="p-4 md:p-6 bg-black/20 border-t border-stone-800">
             <form 
