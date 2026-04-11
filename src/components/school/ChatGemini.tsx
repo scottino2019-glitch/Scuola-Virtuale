@@ -16,6 +16,7 @@ export const ChatGemini: React.FC = () => {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const scrollToBottom = () => {
     setTimeout(() => {
@@ -27,23 +28,39 @@ export const ChatGemini: React.FC = () => {
     scrollToBottom();
   }, [messages, isLoading]);
 
-  const handleSend = async () => {
+  useEffect(() => {
+    // Focus input on mount
+    setTimeout(() => inputRef.current?.focus(), 500);
+  }, []);
+
+  const handleSend = async (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
     if (!input.trim() || isLoading) return;
 
-    const userMessage: ChatMessage = { role: 'user', text: input };
+    const currentInput = input;
+    const userMessage: ChatMessage = { role: 'user', text: currentInput };
+    
     setMessages(prev => [...prev, userMessage]);
     setInput('');
     setIsLoading(true);
 
-    const history = messages.map(m => ({
-      role: m.role,
-      parts: [{ text: m.text }]
-    }));
-    history.push({ role: 'user', parts: [{ text: input }] });
+    try {
+      const history = messages.map(m => ({
+        role: m.role,
+        parts: [{ text: m.text }]
+      }));
+      history.push({ role: 'user', parts: [{ text: currentInput }] });
 
-    const response = await chatWithGemini(history);
-    setMessages(prev => [...prev, { role: 'model', text: response }]);
-    setIsLoading(false);
+      const response = await chatWithGemini(history);
+      setMessages(prev => [...prev, { role: 'model', text: response }]);
+    } catch (error) {
+      console.error("Chat Error:", error);
+      setMessages(prev => [...prev, { role: 'model', text: "Scusa, ho avuto un problema tecnico. Riprova." }]);
+    } finally {
+      setIsLoading(false);
+      // Re-focus input after a short delay to allow keyboard to stay open on some mobile browsers
+      setTimeout(() => inputRef.current?.focus(), 100);
+    }
   };
 
   return (
@@ -99,22 +116,26 @@ export const ChatGemini: React.FC = () => {
           </ScrollArea>
           
           <div className="p-4 md:p-6 bg-black/20 border-t border-stone-800">
-            <div className="flex gap-2 md:gap-3 bg-stone-900/50 p-2 rounded-2xl border border-stone-800 shadow-inner">
+            <form 
+              onSubmit={handleSend}
+              className="flex gap-2 md:gap-3 bg-stone-900/50 p-2 rounded-2xl border border-stone-800 shadow-inner"
+            >
               <Input
+                ref={inputRef}
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                onKeyPress={(e) => e.key === 'Enter' && handleSend()}
                 placeholder="Chiedi qualcosa..."
-                className="flex-1 bg-transparent border-none text-stone-200 placeholder:text-stone-600 focus-visible:ring-0 text-base md:text-lg font-serif"
+                disabled={isLoading}
+                className="flex-1 bg-transparent border-none text-stone-200 placeholder:text-stone-600 focus-visible:ring-0 text-base md:text-lg font-serif disabled:opacity-50"
               />
               <Button 
-                onClick={handleSend} 
+                type="submit"
                 disabled={isLoading}
                 className="rounded-xl bg-campus-accent hover:bg-stone-700 text-white shadow-lg px-4 md:px-6"
               >
                 {isLoading ? <Loader2 className="h-5 w-5 animate-spin" /> : <Send className="h-5 w-5" />}
               </Button>
-            </div>
+            </form>
           </div>
         </CardContent>
       </Card>

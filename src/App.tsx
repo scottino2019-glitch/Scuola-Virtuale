@@ -143,7 +143,10 @@ export default function App() {
         </div>
 
         {/* Content Viewport */}
-        <div className="flex-1 overflow-y-auto no-scrollbar bg-campus-dark relative">
+        <div className={cn(
+          "flex-1 relative bg-campus-dark flex flex-col min-h-0",
+          activeTab !== 'chat' && "overflow-y-auto no-scrollbar"
+        )}>
           {/* Background Decoration */}
           <div className="absolute inset-0 opacity-5 pointer-events-none">
             <div className="absolute top-10 left-10 w-64 h-64 bg-campus-gold rounded-full blur-3xl" />
