@@ -116,8 +116,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
       <div className="p-6 border-t border-stone-800/50">
         <div className="bg-stone-900/50 p-4 rounded-2xl border border-stone-800">
           <p className="text-[10px] font-bold text-stone-500 uppercase tracking-widest mb-1">Studente</p>
-          <p className="text-sm font-bold text-stone-200">Mario Rossi</p>
-          <p className="text-[10px] text-stone-500 italic">5^A Informatica</p>
+          <p className="text-sm font-bold text-stone-200">Silvy</p>
+          <p className="text-[10px] text-stone-500 italic">Lingue</p>
         </div>
       </div>
     </div>
