@@ -27,12 +27,11 @@ const INITIAL_LESSONS: Lesson[] = [
 ];
 
 const CLASSROOMS: ClassroomType[] = [
-  { id: 'math', name: 'Aula di Coreano', icon: 'languages', appUrl: 'https://www.koreanclass101.com/dashboard' },
+  { id: 'math', name: 'Aula di Coreano', icon: 'languages', appUrl: 'https://www.learnkoreantools.com/it' },
   { id: 'coding', name: 'Laboratorio Coding', icon: 'code', appUrl: 'https://play.tailwindcss.com/' },
   { id: 'languages', name: 'Aula di Cinese', icon: 'languages', appUrl: 'https://www.chineseconverter.com/it' },
-  { id: 'languages', name: 'Aula di Russo', icon: 'languages', appUrl: 'https://www.russiantools.com/it' },
   { id: 'library', name: 'Biblioteca Digitale', icon: 'book', appUrl: 'https://archive.org/details/books' },
-  { id: 'whiteboard', name: 'Aula2 Coreano', icon: 'languages', appUrl: 'https://www.learnkoreantools.com/it' },
+  { id: 'whiteboard', name: 'Aula di Russo', icon: 'languages', appUrl: 'https://www.russiantools.com/it' },
 ];
 
 export default function App() {
