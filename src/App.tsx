@@ -19,19 +19,20 @@ const INITIAL_NOTES: Note[] = [
 ];
 
 const INITIAL_LESSONS: Lesson[] = [
-  { id: '1', subject: 'Matematica', time: '08:00 - 09:00', day: 'Lunedì', room: 'Aula 102' },
-  { id: '2', subject: 'Fisica', time: '09:00 - 10:00', day: 'Lunedì', room: 'Laboratorio' },
-  { id: '3', subject: 'Italiano', time: '10:00 - 11:00', day: 'Lunedì', room: 'Aula 102' },
-  { id: '4', subject: 'Storia', time: '08:00 - 09:00', day: 'Martedì', room: 'Aula 105' },
+  { id: '1', subject: 'Cinese', time: '08:00 - 09:00', day: 'Lunedì', room: 'Aula 102' },
+  { id: '2', subject: 'Convesazione', time: '09:00 - 10:00', day: 'Lunedì', room: 'Laboratorio' },
+  { id: '3', subject: 'Coreano', time: '10:00 - 11:00', day: 'Lunedì', room: 'Aula 102' },
+  { id: '4', subject: 'Russo', time: '08:00 - 09:00', day: 'Martedì', room: 'Aula 105' },
   { id: '5', subject: 'Informatica', time: '09:00 - 11:00', day: 'Mercoledì', room: 'Lab Info 1' },
 ];
 
 const CLASSROOMS: ClassroomType[] = [
-  { id: 'math', name: 'Aula di Matematica', icon: 'calculator', appUrl: 'https://www.geogebra.org/graphing?embed' },
-  { id: 'coding', name: 'Laboratorio Coding', icon: 'code', appUrl: 'https://replit.com/~' },
-  { id: 'languages', name: 'Aula di Lingue', icon: 'languages', appUrl: 'https://www.duolingo.com/' },
+  { id: 'math', name: 'Aula di Coreano', icon: 'languages', appUrl: 'https://www.koreanclass101.com/dashboard' },
+  { id: 'coding', name: 'Laboratorio Coding', icon: 'code', appUrl: 'https://play.tailwindcss.com/' },
+  { id: 'languages', name: 'Aula di Cinese', icon: 'languages', appUrl: 'https://www.chineseconverter.com/it' },
+  { id: 'languages', name: 'Aula di Russo', icon: 'languages', appUrl: 'https://www.russiantools.com/it' },
   { id: 'library', name: 'Biblioteca Digitale', icon: 'book', appUrl: 'https://archive.org/details/books' },
-  { id: 'whiteboard', name: 'Lavagna Condivisa', icon: 'edit', appUrl: 'https://excalidraw.com/' },
+  { id: 'whiteboard', name: 'Aula2 Coreano', icon: 'languages', appUrl: 'https://www.learnkoreantools.com/it' },
 ];
 
 export default function App() {
