@@ -27,14 +27,14 @@ const INITIAL_LESSONS: Lesson[] = [
 ];
 
 const CLASSROOMS: ClassroomType[] = [
-  { id: 'languages', name: 'Aula di Coreano', icon: 'languages', appUrl: 'https://www.learnkoreantools.com/it' },
-  { id: 'languages', name: 'Aula di Coreano', icon: 'languages', appUrl: 'https://esercizi-lingua-coreana.netlify.app/' },
-  { id: 'coding', name: 'Laboratorio Coding', icon: 'code', appUrl: 'https://play.tailwindcss.com/' },
-  { id: 'languages', name: 'Aula di Cinese', icon: 'languages', appUrl: 'https://www.chineseconverter.com/it' },
-  { id: 'languages', name: 'Aula di Cinese', icon: 'languages', appUrl: 'https://hanzizero.netlify.app/' },
-  { id: 'languages', name: 'Aula di Cinese', icon: 'languages', appUrl: 'https://esercizi-lingua-cinese.vercel.app/' },
+  { id: 'korean-tools', name: 'Aula di Coreano (Strumenti)', icon: 'languages', appUrl: 'https://www.learnkoreantools.com/it' },
+  { id: 'korean-exercises', name: 'Aula di Coreano (Esercizi)', icon: 'languages', appUrl: 'https://esercizi-lingua-coreana.netlify.app/' },
+  { id: 'tailwind-coding', name: 'Laboratorio Coding (Tailwind)', icon: 'code', appUrl: 'https://play.tailwindcss.com/' },
+  { id: 'chinese-conv', name: 'Aula di Cinese (Convertitore)', icon: 'languages', appUrl: 'https://www.chineseconverter.com/it' },
+  { id: 'chinese-hanzi', name: 'Aula di Cinese (Hanzi)', icon: 'languages', appUrl: 'https://hanzizero.netlify.app/' },
+  { id: 'chinese-exercises', name: 'Aula di Cinese (Esercizi)', icon: 'languages', appUrl: 'https://esercizi-lingua-cinese.vercel.app/' },
   { id: 'library', name: 'Biblioteca Digitale', icon: 'book', appUrl: 'https://archive.org/details/books' },
-  { id: 'whiteboard', name: 'Aula di Russo', icon: 'languages', appUrl: 'https://www.russiantools.com/it' },
+  { id: 'russian', name: 'Aula di Russo', icon: 'languages', appUrl: 'https://www.russiantools.com/it' },
 ];
 
 export default function App() {
