@@ -30,6 +30,7 @@ const CLASSROOMS: ClassroomType[] = [
   { id: 'korean-tools', name: 'Aula di Coreano (Strumenti)', icon: 'languages', appUrl: 'https://www.learnkoreantools.com/it' },
   { id: 'korean-exercises', name: 'Aula di Coreano (Esercizi)', icon: 'languages', appUrl: 'https://esercizi-lingua-coreana.netlify.app/' },
   { id: 'tailwind-coding', name: 'Laboratorio Coding (Tailwind)', icon: 'code', appUrl: 'https://play.tailwindcss.com/' },
+  { id: 'ide-coding', name: 'Esercizi di Coding (Json)', icon: 'code', appUrl: 'https://ide-core.vercel.app/' },
   { id: 'chinese-conv', name: 'Aula di Cinese (Convertitore)', icon: 'languages', appUrl: 'https://www.chineseconverter.com/it' },
   { id: 'chinese-hanzi', name: 'Aula di Cinese (Hanzi)', icon: 'languages', appUrl: 'https://hanzizero.netlify.app/' },
   { id: 'chinese-exercises', name: 'Aula di Cinese (Esercizi)', icon: 'languages', appUrl: 'https://esercizi-lingua-cinese.vercel.app/' },
