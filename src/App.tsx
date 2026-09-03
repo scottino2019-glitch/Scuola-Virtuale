@@ -29,13 +29,16 @@ const INITIAL_LESSONS: Lesson[] = [
 const CLASSROOMS: ClassroomType[] = [
   { id: 'korean-tools', name: 'Aula di Coreano (Strumenti)', icon: 'languages', appUrl: 'https://www.learnkoreantools.com/it' },
   { id: 'korean-exercises', name: 'Aula di Coreano (Esercizi)', icon: 'languages', appUrl: 'https://esercizi-lingua-coreana.netlify.app/' },
+  { id: 'korean-exercises', name: 'Aula di Coreano (Esercizi)', icon: 'languages', appUrl: 'https://eserciziario-di-lingua-coreana.vercel.app/' },
+  { id: 'korean-exercises', name: 'Aula di Coreano (Esercizi)', icon: 'languages', appUrl: 'https://costruttore-di-frasi-coreane.vercel.app/' },
+  { id: 'chinese-conv', name: 'Aula di Cinese (Convertitore)', icon: 'languages', appUrl: 'https://www.chineseconverter.com/it' },
+  { id: 'chinese-exercises', name: 'Aula di Cinese (Esercizi)', icon: 'languages', appUrl: 'https://esercizi-lingua-cinese.vercel.app/' },
+  { id: 'russian', name: 'Aula di Russo', icon: 'languages', appUrl: 'https://www.russiantools.com/it' },
   { id: 'tailwind-coding', name: 'Laboratorio Coding (Tailwind)', icon: 'code', appUrl: 'https://play.tailwindcss.com/' },
   { id: 'ide-coding', name: 'Esercizi di Coding (Json)', icon: 'code', appUrl: 'https://ide-core.vercel.app/' },
-  { id: 'chinese-conv', name: 'Aula di Cinese (Convertitore)', icon: 'languages', appUrl: 'https://www.chineseconverter.com/it' },
   { id: 'tutor-programmazione', name: 'Aula di Coding (Coding)', icon: 'code', appUrl: 'https://tutor-programmazione.netlify.app/' },
-  { id: 'chinese-exercises', name: 'Aula di Cinese (Esercizi)', icon: 'languages', appUrl: 'https://esercizi-lingua-cinese.vercel.app/' },
   { id: 'library', name: 'Biblioteca Digitale', icon: 'book', appUrl: 'https://archive.org/details/books' },
-  { id: 'russian', name: 'Aula di Russo', icon: 'languages', appUrl: 'https://www.russiantools.com/it' },
+
 ];
 
 export default function App() {
