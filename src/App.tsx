@@ -29,8 +29,8 @@ const INITIAL_LESSONS: Lesson[] = [
 const CLASSROOMS: ClassroomType[] = [
   { id: 'korean-tools', name: 'Aula di Coreano (Strumenti)', icon: 'languages', appUrl: 'https://www.learnkoreantools.com/it' },
   { id: 'korean-exercises', name: 'Aula di Coreano (Esercizi)', icon: 'languages', appUrl: 'https://esercizi-lingua-coreana.netlify.app/' },
-  { id: 'korean-exercises', name: 'Aula di Coreano (Esercizi)', icon: 'languages', appUrl: 'https://eserciziario-di-lingua-coreana.vercel.app/' },
-  { id: 'korean-exercises', name: 'Aula di Coreano (Esercizi)', icon: 'languages', appUrl: 'https://costruttore-di-frasi-coreane.vercel.app/' },
+  { id: 'korean-exercises', name: 'Aula di Coreano (Eserciziario)', icon: 'languages', appUrl: 'https://eserciziario-di-lingua-coreana.vercel.app/' },
+  { id: 'korean-exercises', name: 'Aula di Coreano (Costruttore)', icon: 'languages', appUrl: 'https://costruttore-di-frasi-coreane.vercel.app/' },
   { id: 'chinese-conv', name: 'Aula di Cinese (Convertitore)', icon: 'languages', appUrl: 'https://www.chineseconverter.com/it' },
   { id: 'chinese-exercises', name: 'Aula di Cinese (Esercizi)', icon: 'languages', appUrl: 'https://esercizi-lingua-cinese.vercel.app/' },
   { id: 'russian', name: 'Aula di Russo', icon: 'languages', appUrl: 'https://www.russiantools.com/it' },
