@@ -38,7 +38,6 @@ const CLASSROOMS: ClassroomType[] = [
   { id: 'ide-coding', name: 'Esercizi (Json)', icon: 'code', appUrl: 'https://ide-core.vercel.app/' },
   { id: 'tutor-programmazione', name: 'Coding (Coding)', icon: 'code', appUrl: 'https://tutor-programmazione.netlify.app/' },
   { id: 'library', name: 'Biblioteca', icon: 'book', appUrl: 'https://archive.org/details/books' },
-  { id: 'exercices', name: 'Eserciziario', icon: 'book', appUrl: 'https://pdf-studio-editor.vercel.app/' },
   { id: 'study', name: 'Pdf  Studio', icon: 'book', appUrl: 'https://pdf-studio-editor.vercel.app/' },
 
  
