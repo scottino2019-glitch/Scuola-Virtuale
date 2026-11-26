@@ -27,17 +27,22 @@ const INITIAL_LESSONS: Lesson[] = [
 ];
 
 const CLASSROOMS: ClassroomType[] = [
-  { id: 'korean-tools', name: 'Aula di Coreano (Strumenti)', icon: 'languages', appUrl: 'https://www.learnkoreantools.com/it' },
-  { id: 'korean-exercises', name: 'Aula di Coreano (Esercizi)', icon: 'languages', appUrl: 'https://esercizi-lingua-coreana.netlify.app/' },
-  { id: 'korean-exercises-2', name: 'Aula di Coreano (Esercizi2)', icon: 'languages', appUrl: 'https://eserciziario-di-lingua-coreana.vercel.app/' },
-  { id: 'korean-exercises-3', name: 'Aula di Coreano (Esercizi3)', icon: 'languages', appUrl: 'https://costruttore-di-frasi-coreane.vercel.app/' },
-  { id: 'chinese-conv', name: 'Aula di Cinese (Convertitore)', icon: 'languages', appUrl: 'https://www.chineseconverter.com/it' },
-  { id: 'chinese-exercises', name: 'Aula di Cinese (Esercizi)', icon: 'languages', appUrl: 'https://esercizi-lingua-cinese.vercel.app/' },
-  { id: 'russian', name: 'Aula di Russo', icon: 'languages', appUrl: 'https://www.russiantools.com/it' },
-  { id: 'tailwind-coding', name: 'Laboratorio Coding (Tailwind)', icon: 'code', appUrl: 'https://play.tailwindcss.com/' },
-  { id: 'ide-coding', name: 'Esercizi di Coding (Json)', icon: 'code', appUrl: 'https://ide-core.vercel.app/' },
-  { id: 'tutor-programmazione', name: 'Aula di Coding (Coding)', icon: 'code', appUrl: 'https://tutor-programmazione.netlify.app/' },
-  { id: 'library', name: 'Biblioteca Digitale', icon: 'book', appUrl: 'https://archive.org/details/books' },
+  { id: 'korean-tools', name: 'Coreano (Strumenti)', icon: 'languages', appUrl: 'https://www.learnkoreantools.com/it' },
+  { id: 'korean-exercises', name: 'Coreano (Esercizi)', icon: 'languages', appUrl: 'https://esercizi-lingua-coreana.netlify.app/' },
+  { id: 'korean-exercises-2', name: 'Coreano (Esercizi2)', icon: 'languages', appUrl: 'https://eserciziario-di-lingua-coreana.vercel.app/' },
+  { id: 'korean-exercises-3', name: 'Coreano (Esercizi3)', icon: 'languages', appUrl: 'https://costruttore-di-frasi-coreane.vercel.app/' },
+  { id: 'chinese-conv', name: 'Cinese (Convertitore)', icon: 'languages', appUrl: 'https://www.chineseconverter.com/it' },
+  { id: 'chinese-exercises', name: 'Cinese (Esercizi)', icon: 'languages', appUrl: 'https://esercizi-lingua-cinese.vercel.app/' },
+  { id: 'russian', name: 'Russo', icon: 'languages', appUrl: 'https://www.russiantools.com/it' },
+  { id: 'tailwind-coding', name: 'Coding (Tailwind)', icon: 'code', appUrl: 'https://play.tailwindcss.com/' },
+  { id: 'ide-coding', name: 'Esercizi (Json)', icon: 'code', appUrl: 'https://ide-core.vercel.app/' },
+  { id: 'tutor-programmazione', name: 'Coding (Coding)', icon: 'code', appUrl: 'https://tutor-programmazione.netlify.app/' },
+  { id: 'library', name: 'Biblioteca', icon: 'book', appUrl: 'https://archive.org/details/books' },
+  { id: 'library', name: 'Eserciziario', icon: 'book', appUrl: 'https://pdf-studio-editor.vercel.app/' },
+  { id: 'library', name: 'Pdf  Studio', icon: 'book', appUrl: 'https://pdf-studio-editor.vercel.app/' },
+
+ 
+
 
 ];
 
